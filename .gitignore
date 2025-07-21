@@ -1,0 +1,29 @@
+# Bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.env/
+.venv/
+env/
+
+# VSCode or other editor config
+.vscode/
+
+# Flask-SQLAlchemy SQLite database
+*.sqlite3
+*.db
+
+# Environment variables or secrets
+*.env
+
+# Compiled CSS from SCSS (optional)
+static/css/
+
+# macOS specific
+.DS_Store
+
+# Pytest cache
+.pytest_cache/
