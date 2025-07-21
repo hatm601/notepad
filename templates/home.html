@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+
+{%block head%}
+{%endblock%}
+
+{%block body%}
+    <body>
+        <div class="content">
+            <h1>Notepad</h1>
+            <p>This is a simple notepad application.</p>
+            {%if note%}
+                <a href="{{ url_for('edit') }}" class="btn">Edit Note</a>
+                <a href="{{ url_for('login') }}" class="btn">Logout</a>
+            {%else%}
+                <p>No note saved yet.</p>
+                <a href="{{ url_for('edit') }}" class="btn">Create Note</a>
+                <a href="{{ url_for('login') }}" class="btn">Logout</a>
+            {%endif%}
+        </div>
+    </body>
+{%endblock%}
