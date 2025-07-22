@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_scss import Scss
+import os
 
 app = Flask(__name__)
-app.secret_key = "super-secret-key"
+app.secret_key = os.urandom(24)
 Scss(app)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///notepad.db"
